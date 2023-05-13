@@ -8,10 +8,22 @@ namespace XMLtoJSONConverter
 {
   class Program
   {
-    public static void Main(string[] args)
+    public static void XmlToJson()
     {
-      string xmlFilePath = "./inputs/sample.xml";
-      string jsonFilePath = "./outputs/sample.json";
+      Console.WriteLine("Enter the file name you'd like to convert:");
+
+      string xmlFilePath;
+      string jsonFileName;
+      string xmlFileName = Console.ReadLine();
+      while (xmlFileName.Length < 1) {
+        Console.WriteLine("Enter the file name you'd like to convert:");
+        xmlFileName = Console.ReadLine();
+      }
+
+      xmlFilePath = $"./inputs/{xmlFileName}.xml";
+      jsonFileName = xmlFileName;
+
+      string jsonFilePath = $"./outputs/{jsonFileName}.json";
       // Reading XML file
       string xml = File.ReadAllText(xmlFilePath);
       // Processing XML and crearing JSON file
@@ -33,6 +45,10 @@ namespace XMLtoJSONConverter
       File.WriteAllTextAsync(jsonFilePath, booksArray.ToString());
 
       Console.WriteLine("Converting successfully finished!");
+    }
+    public static void Main(string[] args)
+    {
+      XmlToJson();
     }
   }
 }
