@@ -1,0 +1,13 @@
+# .NET Core
+bin/
+obj/
+*.exe
+*.dll
+*.pdb
+*.userprefs
+*.vscode
+
+# Visual Studio Code
+.vscode/
+!.vscode/tasks.json
+!.vscode/launch.json
