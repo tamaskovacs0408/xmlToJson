@@ -35,14 +35,15 @@ namespace XMLtoJSONConverter
       xmlDocument.LoadXml(xml);
 
       // Get the book elements from the XML and convert them to the json file
-      Console.Write("Enter the section name for you'd like to create the json objects: ");
-      string xmlSectionName = Console.ReadLine();
-      while (xmlFileName.Length < 1)
-      {
-        Console.WriteLine("Enter the section name for you'd like to create the json objects: ");
-        xmlSectionName = Console.ReadLine();
+      string xmlElementName = Console.ReadLine();
+      while (xmlElementName.Length < 1) {
+        Console.Write("Enter the section name for you'd like to create the json objects: ");
+        xmlElementName = Console.ReadLine();
       }
-      var bookElements = xmlDocument.SelectNodes($"//{xmlSectionName}");
+      if (xmlElementName != null) {
+        xmlElementName = xmlElementName.Trim().ToLower();
+      }
+      var bookElements = xmlDocument.SelectNodes($"//{xmlElementName}");
       JArray booksArray = new JArray();
 
       foreach (XmlNode bookNode in bookElements)
