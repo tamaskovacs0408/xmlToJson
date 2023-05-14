@@ -14,10 +14,14 @@ namespace XMLtoJSONConverter
 
       string xmlFilePath;
       string jsonFileName;
+      // string modifiedXmlFileName = null;
       string xmlFileName = Console.ReadLine();
       while (xmlFileName.Length < 1) {
         Console.WriteLine("Enter the file name you'd like to convert: ");
         xmlFileName = Console.ReadLine();
+      }
+      if (xmlFileName != null) {
+        xmlFileName = xmlFileName.Trim().ToLower();
       }
 
       xmlFilePath = $"./inputs/{xmlFileName}.xml";
