@@ -10,18 +10,15 @@ namespace XMLtoJSONConverter
   {
     public static void XmlToJson()
     {
-      Console.Write("Enter the file name you'd like to convert: ");
+
 
       string xmlFilePath;
       string jsonFileName;
-      // string modifiedXmlFileName = null;
-      string xmlFileName = Console.ReadLine();
+      Console.WriteLine("Enter the file name you'd like to convert: ");
+      string xmlFileName = Console.ReadLine().Trim().ToLower();
       while (xmlFileName.Length < 1) {
-        Console.WriteLine("Enter the file name you'd like to convert: ");
-        xmlFileName = Console.ReadLine();
-      }
-      if (xmlFileName != null) {
-        xmlFileName = xmlFileName.Trim().ToLower();
+        Console.Write("Enter the file name you'd like to convert: ");
+        xmlFileName = Console.ReadLine().Trim().ToLower();
       }
 
       xmlFilePath = $"./inputs/{xmlFileName}.xml";
@@ -35,14 +32,13 @@ namespace XMLtoJSONConverter
       xmlDocument.LoadXml(xml);
 
       // Get the book elements from the XML and convert them to the json file
-      string xmlElementName = Console.ReadLine();
+      Console.WriteLine("Enter the section name for you'd like to create the json objects: ");
+      string xmlElementName = Console.ReadLine().Trim().ToLower();
       while (xmlElementName.Length < 1) {
         Console.WriteLine("Enter the section name for you'd like to create the json objects: ");
-        xmlElementName = Console.ReadLine();
+        xmlElementName = Console.ReadLine().Trim().ToLower();
       }
-      if (xmlElementName != null) {
-        xmlElementName = xmlElementName.Trim().ToLower();
-      }
+
       var xmlElements = xmlDocument.SelectNodes($"//{xmlElementName}");
       JArray jsonArray = new JArray();
 
