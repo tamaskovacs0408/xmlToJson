@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "yNZbzPJHXqmNac/RpmbgV6aUfkbBLXi8eJBbhtxSM90H6t+kOh/ebIjv75Oswa/SFGcr6uyJMG6iJLjuijbMhw==",
+  "dgSpecHash": "bpRCAKMHCbSv+PSu92RpG7mXnYtRpZd5skZPqmwAe2ueAd4z1rpup4uYArPCml7qV3T4+kWClNqoYwCDQykaOA==",
   "success": true,
   "projectFilePath": "D:\\C#\\Web\\xmlToJson\\xmlToJsonTest\\xmlToJsonTest.csproj",
   "expectedPackageFiles": [
@@ -13,7 +13,7 @@
     "C:\\Users\\Huawei\\.nuget\\packages\\microsoft.testplatform.testhost\\17.5.0\\microsoft.testplatform.testhost.17.5.0.nupkg.sha512",
     "C:\\Users\\Huawei\\.nuget\\packages\\mstest.testadapter\\2.2.10\\mstest.testadapter.2.2.10.nupkg.sha512",
     "C:\\Users\\Huawei\\.nuget\\packages\\mstest.testframework\\2.2.10\\mstest.testframework.2.2.10.nupkg.sha512",
-    "C:\\Users\\Huawei\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\Huawei\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\Huawei\\.nuget\\packages\\nuget.frameworks\\5.11.0\\nuget.frameworks.5.11.0.nupkg.sha512",
     "C:\\Users\\Huawei\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\Huawei\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
